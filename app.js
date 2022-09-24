@@ -56,13 +56,17 @@ function speakThis(message) {
 
     speech.text = "I did not understand what you said please try again";
 
-    if(message.includes('hey') || message.includes('hello')) {
+    if(message.includes('hey') || message.includes('hi')) {
         const finalText = "Hello Sir";
         speech.text = finalText;
     }
 
     else if(message.includes('how are you')) {
         const finalText = "I am fine sir tell me how can i help you";
+        speech.text = finalText;
+        }    else if(message.includes('hello')) {
+            var audio = new Audio('hat.mp3');
+            audio.play();
         speech.text = finalText;
     
 
